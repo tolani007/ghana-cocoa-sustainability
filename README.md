@@ -11,6 +11,16 @@ Use open-source climate and yield data to explore how Ghanaian cocoa farming can
 ✅ Data collection done  
 ⏳ Cleaning + visualization in progress  
 🚧 Cocoa profit simulator in development  
+## 📦 Usage
+
+This project uses `clean_merge.py` to prepare a merged dataset of cocoa yield, rainfall, and temperature (1961–2023) for Ghana.
+
+### ▶️ To run the cleaning script:
+
+Make sure you have Python and pandas installed.
+
+```bash
+pip install pandas
 
 ## 📁 Repo Structure (coming soon)
 - `/data` - CSVs from FAOSTAT and World Bank  
