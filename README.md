@@ -29,4 +29,4 @@ pip install pandas
 - `/streamlit_app` - Cocoa Profit Estimator
 
 ## 📈 Sneak Peek
-Coming soon: Cocoa Yield vs. Rainfall (2000–2023) 📉
+Coming soon: Cocoa Yield vs. Rainfall (1961–2023) 📉
