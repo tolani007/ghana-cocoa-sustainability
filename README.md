@@ -30,3 +30,7 @@ pip install pandas
 
 ## 📈 Sneak Peek
 Coming soon: Cocoa Yield vs. Rainfall (1961–2023) 📉
+
+
+### 🧼 Scripts
+- `clean_merge.py` — combines rainfall, temperature, and yield datasets (1961–2023)
