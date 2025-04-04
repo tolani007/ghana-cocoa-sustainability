@@ -7,31 +7,31 @@ Clean and merge cocoa yield, rainfall, and temperature datasets for Ghana (1961�
 import pandas as pd
 
 # === 1. Load the datasets ===
-yield_df = pd.read_excel("data/annual_ghana_average_yield_dataset.xls", skiprows=0)
-rain_df = pd.read_excel("data/annual_ghana_average_rain_dataset.xlsx", skiprows=0)
-temp_df = pd.read_excel("data/annual_ghana_average_temperature_dataset.xlsx", skiprows=0)
+yield_df = pd.read_excel("data/annual_ghana_average_yield_dataset.xls")
+rain_df = pd.read_excel("data/annual_ghana_average_rain_dataset.xlsx")
+temp_df = pd.read_excel("data/annual_ghana_average_temperature_dataset.xlsx")
 
-# === 2. Transpose & Clean Rain and Temp ===
+# === 2. Reshape climate data ===
 def reshape_climate(df, value_col):
-    df = df.T.reset_index()
-    df.columns = ['Year', value_col]
-    df = df[df['Year'].str.contains("^\d{4}", regex=True)]  # Only keep rows with years
-    df['Year'] = df['Year'].str[:4].astype(int)
-    df[value_col] = pd.to_numeric(df[value_col], errors='coerce')
-    df = df[df['Year'].between(1961, 2023)]  # ✅ filter by year
-    return df
+    df = df.drop(columns=["code", "name"])  # Drop metadata columns
+    df = df.T.reset_index()  # Transpose years to rows
+    df.columns = ["Date", value_col]  # Rename
+    df["Year"] = df["Date"].str.extract(r"(\d{4})").astype(int)
+    df = df[df["Year"].between(1961, 2023)]
+    df[value_col] = pd.to_numeric(df[value_col], errors="coerce")
+    return df[["Year", value_col]]
 
-rain_df = reshape_climate(rain_df, "Precipitation_mm")
-temp_df = reshape_climate(temp_df, "Avg_Temp_C")
+rain_clean = reshape_climate(rain_df, "Rainfall_mm")
+temp_clean = reshape_climate(temp_df, "AvgTemp_C")
 
-# === 3. Clean Yield Dataset ===
-yield_df = yield_df[["Year", "Value"]]
-yield_df.columns = ["Year", "Yield_kg_per_ha"]
-yield_df = yield_df[yield_df["Year"].between(1961, 2023)]  # ✅ apply same filter
+# === 3. Clean yield data ===
+yield_clean = yield_df[["Year", "Value"]].copy()
+yield_clean = yield_clean[yield_clean["Year"].between(1961, 2023)]
+yield_clean.rename(columns={"Value": "Yield_kg_per_ha"}, inplace=True)
 
-# === 4. Merge all datasets ===
-merged = yield_df.merge(rain_df, on="Year").merge(temp_df, on="Year")
+# === 4. Merge all data ===
+merged = yield_clean.merge(rain_clean, on="Year").merge(temp_clean, on="Year")
 
-# === 5. Export merged data ===
+# === 5. Save merged file ===
 merged.to_csv("data/merged_cocoa_climate.csv", index=False)
 print("✅ Merged data saved to /data/merged_cocoa_climate.csv (1961–2023)")
