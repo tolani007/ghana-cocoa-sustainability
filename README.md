@@ -46,6 +46,10 @@ This includes:
 - Correlation matrix with key insights
 
 📈 Cocoa Yield in Ghana (1961–2023)
+
+![image](https://github.com/user-attachments/assets/b299db07-1d76-4caf-a8b3-4a4b17f9a329)
+
+
 This chart shows how Ghana’s cocoa yield has evolved.
 Notice the sharp rise post-2010 — could hint at better farming tech, improved seedlings, or policy changes.
 
