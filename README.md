@@ -27,6 +27,7 @@ pip install pandas
 - `/scripts` - Python cleaning + merging  
 - `/notebooks` - Exploratory notebooks  
 - `/streamlit_app` - Cocoa Profit Estimator
+```
 
 ## 📈 Sneak Peek
 Coming soon: Cocoa Yield vs. Rainfall (1961–2023) 📉
@@ -35,7 +36,7 @@ Coming soon: Cocoa Yield vs. Rainfall (1961–2023) 📉
 ### 🧼 Scripts
 - `clean_merge.py` — combines rainfall, temperature, and yield datasets (1961–2023)
 
-## 📊 Exploratory Data Analysis (EDA)
+  ## 📊 Exploratory Data Analysis (EDA)
 
 All exploratory work and climate-yield trends are inside [`notebooks/eda.ipynb`](notebooks/eda.ipynb).  
 This includes:
@@ -43,4 +44,6 @@ This includes:
 - Yield growth trends
 - Scatter plots of climate vs yield
 - Correlation matrix with key insights
+
+
 
