@@ -5,7 +5,7 @@ What Ghana’s Cocoa Farmers Can Teach Silicon Valley About Sustainability: A da
 > I analyzed crop and climate data and uncovered a $20M mistake. Here’s how Ghana’s cocoa farmers beat the odds — in 3 charts.
 
 ## 📌 Goal
-Use open-source climate and yield data to explore how Ghanaian cocoa farming can inspire sustainable agri-tech practices.
+I want to use open-source climate and yield data to explore how Ghanaian cocoa farming can inspire sustainable agri-tech practices.
 
 ## 🗂️ Project Status
 ✅ Data collection done  
@@ -28,10 +28,6 @@ pip install pandas
 - `/notebooks` - Exploratory notebooks  
 - `/streamlit_app` - Cocoa Profit Estimator
 ```
-
-## 📈 Sneak Peek
-Coming soon: Cocoa Yield vs. Rainfall (1961–2023) 📉
-
 
 ### 🧼 Scripts
 - `clean_merge.py` — combines rainfall, temperature, and yield datasets (1961–2023)
