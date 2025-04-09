@@ -2,7 +2,16 @@
 What Ghana’s Cocoa Farmers Can Teach Silicon Valley About Sustainability: A data science investigation into cocoa yield, climate impact, and sustainable profitability.
 # 🍫 Ghana Cocoa Sustainability Project
 
-> I analyzed crop and climate data and uncovered a $20M mistake. Here’s how Ghana’s cocoa farmers beat the odds — in 3 charts.
+> I analyzed crop and climate data and uncovered a 20 MILLION DOLLARS miatake. Continue reading to find out how Ghana’s cocoa farmers beat the odds in ways Silicon Vally could learn from.
+Incorporating information about California's electronic waste (e-waste) can underscore the significance of addressing e-waste by the tech hub Silicon Valley in my project. Here are some related statistics:​
+
+E-Waste Generation: California households generate approximately 1.5 tons of e-waste every minute, equating to over 788,000 tons annually. ​
+PIRG
+
+Device Turnover: Consumers in California purchase over 120 million electronic items each year, with many upgrading their devices approximately every 18 months. ​
+USFCA Institutional Repository
+
+While specific data on the total annual value of e-waste in California is limited, these figures highlight the substantial volume of electronic waste generated in the state, emphasizing the importance of effective e-waste management and recycling initiatives.
 
 ## 📌 Goal
 I want to use open-source climate and yield data to explore how Ghanaian cocoa farming can inspire sustainable agri-tech practices.
